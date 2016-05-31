@@ -60,6 +60,7 @@ angular.module('angularFireApp')
         // console.log('Movie not added ' + error);
       });
     }
+    
 
     function updateMovie (id) {
       return movies.$save(id)
