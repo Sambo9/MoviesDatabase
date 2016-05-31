@@ -9,7 +9,7 @@
 angular.module('angularFireApp')
   .directive('update', function () {
     return {
-      templateUrl: '/scripts/directives/update.template.html',
+      templateUrl: '/views/update.template.html',
       restrict: 'E',
       controller: function ($scope, FirebaseConnect, $location) {
         // ===================================

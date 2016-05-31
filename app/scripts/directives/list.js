@@ -9,7 +9,7 @@
 angular.module('angularFireApp')
   .directive('list', function () {
     return {
-      templateUrl: '/scripts/directives/list.template.html',
+      templateUrl: '/views/list.template.html',
       restrict: 'E',
       controller:
         function($scope, FirebaseConnect, $location) {
