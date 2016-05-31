@@ -18,33 +18,35 @@
     Titre
     <input type="text" class="form-control" ng-model="movie.title" placeholder="Titre" required>
   </label>
-  <br/>
+  </div>
+  <div class="form-group">
   <label>
     Réalisateur
     <input type="text" class="form-control" ng-model="movie.director" placeholder="Réalisateur" required>
   </label>
-  <br/>
+  </div>
+  <div class="form-group">
   <label>
     Acteurs
     <div ng-repeat="actor in movie.actors">
       <input type="text" class="form-control" ng-model="actor.firstname" placeholder="Prénom acteur">
       <input type="text" class="form-control" ng-model="actor.lastname" placeholder="Nom acteur" >
-      <span class="text-right">
       <button type="button" class="btn btn-danger" ng-click="removeActor($index)">
         <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
       </button>
-      </span>
       <br/>
     </div>
-    <br/>
-    <button type="button" class="btn btn-success" ng-click="addingActor()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
   </label>
-  <br/>
+    <br/>
+  <button type="button" class="btn btn-success" ng-click="addingActor()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+  </div>
+  <div class="form-group">
   <label>
     Affiche
     <input type="file" accept="image/*" capture="camera" ng-model="movie.poster" id="fileUpload" onchange="angular.element(this).scope().fileChanged()">
   </label>
-  <br/>
+  </div>
+  <div class="form-group">
   <label>
     Note
     <select name="repeatSelect" value="movie.rate" id="repeatSelect" ng-model="movie.rate" ng-options="rate.name for rate in select" required>
@@ -52,7 +54,7 @@
     </select>
     <br>
   </label>
-  <br/>
+  </div>
   <!--<label>-->
   <!--Note-->
   <!--<select name="selectRate" ng-model="movie.rates" class="form-control"></select>-->
