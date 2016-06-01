@@ -9,7 +9,7 @@
 angular.module('angularFireApp')
   .directive('create', function () {
     return {
-      templateUrl: 'views/createtemplate.html',
+      templateUrl: 'views/create.template.html',
       restrict: 'E',
       controller: function ($scope, FirebaseConnect, $location, FIREBASE_URL) {
         // ================================

@@ -1,3 +1,5 @@
+<div class="container">
+
 <div class="alert alert-success" ng-show="movieSuccess">
   <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   <strong>Film supprimé !</strong>
@@ -24,11 +26,7 @@
     <td>{{movie.title}}</td>
     <td>{{movie.director}}</td>
     <td>
-      <ul ng-repeat="actor in movie.actors">
-        <li>
-          {{actor.firstname}} {{actor.lastname}}
-        </li>
-      </ul>
+      <span ng-repeat="actor in movie.actors">{{actor.firstname}} {{actor.lastname}}{{$last ? '' : ', '}}</span>
     </td>
     <td>{{movie.rate.id}}</td>
     <td>
@@ -43,3 +41,4 @@
 <br/>
 
 <button type="button" ng-click="redirect('/create')" class="btn btn-primary">Créer</button>
+</div>
